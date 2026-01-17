@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
    <div className='w-full'>
-        <p>React Routers</p>
+        <p className='bg-green-500'>React Routers</p>
    </div>
   )
 }
