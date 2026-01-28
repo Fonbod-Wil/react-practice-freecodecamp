@@ -14,27 +14,3 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-## Appwrite + PostgreSQL setup (for this project)
-
-This app uses the Appwrite Web SDK to talk to an Appwrite Database (Appwrite uses PostgreSQL under the hood, or can be configured to connect to PostgreSQL depending on your setup).
-
-### Environment variables
-
-Create a `.env` file **inside `09customReact/`** (do not commit it) with:
-
-- **`VITE_APPWRITE_ENDPOINT`**: e.g. `https://cloud.appwrite.io/v1` (or your self-hosted endpoint)
-- **`VITE_APPWRITE_PROJECT_ID`**: your Appwrite Project ID
-- **`VITE_APPWRITE_DATABASE_ID`**: Database ID
-- **`VITE_APPWRITE_COLLECTION_ID`**: Collection ID (for the Todos collection)
-
-Restart Vite after editing `.env`.
-
-### Collection fields expected by the demo
-
-Create a collection with these attributes:
-
-- **`title`**: string
-- **`completed`**: boolean
-
-Set collection permissions so the current user (or “Any” during local dev) can read/write documents, otherwise the demo will error.
