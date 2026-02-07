@@ -1,0 +1,372 @@
+warning: in the working copy of '11blogapp/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '11blogapp/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '11blogapp/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '11blogapp/src/main.jsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/11blogapp/package-lock.json b/11blogapp/package-lock.json[m
+[1mindex e0790a8..85795bc 100644[m
+[1m--- a/11blogapp/package-lock.json[m
+[1m+++ b/11blogapp/package-lock.json[m
+[36m@@ -8,10 +8,13 @@[m
+       "name": "11blogapp",[m
+       "version": "0.0.0",[m
+       "dependencies": {[m
+[32m+[m[32m        "@reduxjs/toolkit": "^2.11.2",[m
+         "@tailwindcss/vite": "^4.1.18",[m
+         "appwrite": "^21.5.0",[m
+         "react": "^19.2.0",[m
+         "react-dom": "^19.2.0",[m
+[32m+[m[32m        "react-redux": "^9.2.0",[m
+[32m+[m[32m        "react-router-dom": "^7.13.0",[m
+         "tailwindcss": "^4.1.18"[m
+       },[m
+       "devDependencies": {[m
+[36m@@ -978,6 +981,32 @@[m
+         "@jridgewell/sourcemap-codec": "^1.4.14"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/@reduxjs/toolkit": {[m
+[32m+[m[32m      "version": "2.11.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.11.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Kd6kAHTA6/nUpp8mySPqj3en3dm0tdMIgbttnQ1xFMVpufoj+ADi8pXLBsd4xzTRHQa7t/Jv8W5UnCuW4kuWMQ==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@standard-schema/spec": "^1.0.0",[m
+[32m+[m[32m        "@standard-schema/utils": "^0.3.0",[m
+[32m+[m[32m        "immer": "^11.0.0",[m
+[32m+[m[32m        "redux": "^5.0.1",[m
+[32m+[m[32m        "redux-thunk": "^3.1.0",[m
+[32m+[m[32m        "reselect": "^5.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": "^16.9.0 || ^17.0.0 || ^18 || ^19",[m
+[32m+[m[32m        "react-redux": "^7.2.1 || ^8.1.3 || ^9.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependenciesMeta": {[m
+[32m+[m[32m        "react": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "react-redux": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/@rolldown/pluginutils": {[m
+       "version": "1.0.0-beta.53",[m
+       "resolved": "https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.53.tgz",[m
+[36m@@ -1310,6 +1339,18 @@[m
+         "win32"[m
+       ][m
+     },[m
+[32m+[m[32m    "node_modules/@standard-schema/spec": {[m
+[32m+[m[32m      "version": "1.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@standard-schema/spec/-/spec-1.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@standard-schema/utils": {[m
+[32m+[m[32m      "version": "0.3.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@standard-schema/utils/-/utils-0.3.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/@tailwindcss/node": {[m
+       "version": "4.1.18",[m
+       "resolved": "https://registry.npmjs.org/@tailwindcss/node/-/node-4.1.18.tgz",[m
+[36m@@ -1629,7 +1670,7 @@[m
+       "version": "19.2.9",[m
+       "resolved": "https://registry.npmjs.org/@types/react/-/react-19.2.9.tgz",[m
+       "integrity": "sha512-Lpo8kgb/igvMIPeNV2rsYKTgaORYdO1XGVZ4Qz3akwOj0ySGYMPlQWa8BaLn0G63D1aSaAQ5ldR06wCpChQCjA==",[m
+[31m-      "dev": true,[m
+[32m+[m[32m      "devOptional": true,[m
+       "license": "MIT",[m
+       "dependencies": {[m
+         "csstype": "^3.2.2"[m
+[36m@@ -1645,6 +1686,12 @@[m
+         "@types/react": "^19.2.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/@types/use-sync-external-store": {[m
+[32m+[m[32m      "version": "0.0.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-zFDAD+tlpf2r4asuHEj0XH6pY6i0g5NeAHPn+15wk3BV6JA69eERFXC1gyGThDkVa1zCyKr5jox1+2LbV/AMLg==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/@vitejs/plugin-react": {[m
+       "version": "5.1.2",[m
+       "resolved": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-5.1.2.tgz",[m
+[36m@@ -1879,6 +1926,19 @@[m
+       "dev": true,[m
+       "license": "MIT"[m
+     },[m
+[32m+[m[32m    "node_modules/cookie": {[m
+[32m+[m[32m      "version": "1.1.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/cookie/-/cookie-1.1.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=18"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/express"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/cross-spawn": {[m
+       "version": "7.0.6",[m
+       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz",[m
+[36m@@ -1898,7 +1958,7 @@[m
+       "version": "3.2.3",[m
+       "resolved": "https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz",[m
+       "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==",[m
+[31m-      "dev": true,[m
+[32m+[m[32m      "devOptional": true,[m
+       "license": "MIT"[m
+     },[m
+     "node_modules/debug": {[m
+[36m@@ -2385,6 +2445,16 @@[m
+         "node": ">= 4"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/immer": {[m
+[32m+[m[32m      "version": "11.1.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/immer/-/immer-11.1.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-6jQTc5z0KJFtr1UgFpIL3N9XSC3saRaI9PwWtzM2pSqkNGtiNkYY2OSwkOGDK2XcTRcLb1pi/aNkKZz0nxVH4Q==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/immer"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/import-fresh": {[m
+       "version": "3.3.1",[m
+       "resolved": "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.1.tgz",[m
+[36m@@ -3055,6 +3125,29 @@[m
+         "react": "^19.2.4"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/react-redux": {[m
+[32m+[m[32m      "version": "9.2.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-redux/-/react-redux-9.2.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ROY9fvHhwOD9ySfrF0wmvu//bKCQ6AeZZq1nJNtbDC+kk5DuSuNX/n6YWYF/SYy7bSba4D4FSz8DJeKY/S/r+g==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@types/use-sync-external-store": "^0.0.6",[m
+[32m+[m[32m        "use-sync-external-store": "^1.4.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "@types/react": "^18.2.25 || ^19",[m
+[32m+[m[32m        "react": "^18.0 || ^19",[m
+[32m+[m[32m        "redux": "^5.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependenciesMeta": {[m
+[32m+[m[32m        "@types/react": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "redux": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/react-refresh": {[m
+       "version": "0.18.0",[m
+       "resolved": "https://registry.npmjs.org/react-refresh/-/react-refresh-0.18.0.tgz",[m
+[36m@@ -3065,6 +3158,65 @@[m
+         "node": ">=0.10.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/react-router": {[m
+[32m+[m[32m      "version": "7.13.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-router/-/react-router-7.13.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-PZgus8ETambRT17BUm/LL8lX3Of+oiLaPuVTRH3l1eLvSPpKO3AvhAEb5N7ihAFZQrYDqkvvWfFh9p0z9VsjLw==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "cookie": "^1.0.1",[m
+[32m+[m[32m        "set-cookie-parser": "^2.6.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": ">=18",[m
+[32m+[m[32m        "react-dom": ">=18"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependenciesMeta": {[m
+[32m+[m[32m        "react-dom": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/react-router-dom": {[m
+[32m+[m[32m      "version": "7.13.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-7.13.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-5CO/l5Yahi2SKC6rGZ+HDEjpjkGaG/ncEP7eWFTvFxbHP8yeeI0PxTDjimtpXYlR3b3i9/WIL4VJttPrESIf2g==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "react-router": "7.13.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": ">=18",[m
+[32m+[m[32m        "react-dom": ">=18"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/redux": {[m
+[32m+[m[32m      "version": "5.0.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/redux/-/redux-5.0.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/redux-thunk": {[m
+[32m+[m[32m      "version": "3.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/redux-thunk/-/redux-thunk-3.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "redux": "^5.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/reselect": {[m
+[32m+[m[32m      "version": "5.1.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/reselect/-/reselect-5.1.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/resolve-from": {[m
+       "version": "4.0.0",[m
+       "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz",[m
+[36m@@ -3135,6 +3287,12 @@[m
+         "semver": "bin/semver.js"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/set-cookie-parser": {[m
+[32m+[m[32m      "version": "2.7.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-2.7.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-oeM1lpU/UvhTxw+g3cIfxXHyJRc/uidd3yK1P242gzHds0udQBYzs3y8j4gCCW+ZJ7ad0yctld8RYO+bdurlvw==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/shebang-command": {[m
+       "version": "2.0.0",[m
+       "resolved": "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz",[m
+[36m@@ -3282,6 +3440,15 @@[m
+         "punycode": "^2.1.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/use-sync-external-store": {[m
+[32m+[m[32m      "version": "1.6.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.6.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/vite": {[m
+       "version": "7.3.1",[m
+       "resolved": "https://registry.npmjs.org/vite/-/vite-7.3.1.tgz",[m
+[1mdiff --git a/11blogapp/package.json b/11blogapp/package.json[m
+[1mindex 915e6c0..1a33fdd 100644[m
+[1m--- a/11blogapp/package.json[m
+[1m+++ b/11blogapp/package.json[m
+[36m@@ -10,10 +10,13 @@[m
+     "preview": "vite preview"[m
+   },[m
+   "dependencies": {[m
+[32m+[m[32m    "@reduxjs/toolkit": "^2.11.2",[m
+     "@tailwindcss/vite": "^4.1.18",[m
+     "appwrite": "^21.5.0",[m
+     "react": "^19.2.0",[m
+     "react-dom": "^19.2.0",[m
+[32m+[m[32m    "react-redux": "^9.2.0",[m
+[32m+[m[32m    "react-router-dom": "^7.13.0",[m
+     "tailwindcss": "^4.1.18"[m
+   },[m
+   "devDependencies": {[m
+[1mdiff --git a/11blogapp/src/App.jsx b/11blogapp/src/App.jsx[m
+[1mindex 0ac0183..5f54eb8 100644[m
+[1m--- a/11blogapp/src/App.jsx[m
+[1m+++ b/11blogapp/src/App.jsx[m
+[36m@@ -1,14 +1,16 @@[m
+[31m-import { useState } from 'react'[m
+[32m+[m[32mimport { Outlet } from 'react-router-dom'[m
+ [m
+ import './App.css'[m
+ [m
+ function App() {[m
+[31m-  const [count, setCount] = useState(0)[m
+[32m+[m[41m  [m
+ [m
+   return ([m
+[31m-    <>[m
+[31m-     <h1>Blog App</h1>[m
+[31m-    </>[m
+[32m+[m[32m    <div>[m
+[32m+[m[32m     <main>[m
+[32m+[m[32m      <Outlet />[m
+[32m+[m[32m     </main>[m
+[32m+[m[32m    </div>[m
+   )[m
+ }[m
+ [m
+[1mdiff --git a/11blogapp/src/main.jsx b/11blogapp/src/main.jsx[m
+[1mindex b9a1a6d..c417907 100644[m
+[1m--- a/11blogapp/src/main.jsx[m
+[1m+++ b/11blogapp/src/main.jsx[m
+[36m@@ -2,9 +2,98 @@[m [mimport { StrictMode } from 'react'[m
+ import { createRoot } from 'react-dom/client'[m
+ import './index.css'[m
+ import App from './App.jsx'[m
+[32m+[m[32mimport {createBrowserRouter, RouterProvider } from "react-router-dom"[m
+[32m+[m[32mimport { Provider } from 'react-redux'[m
+[32m+[m[32mimport store from './store/store.js'[m
+[32m+[m[32mimport Home from './pages/Home.jsx'[m
+[32m+[m[32mimport AddPost from './pages/AddPost.jsx'[m
+[32m+[m[32mimport AllPost from './pages/AllPost.jsx'[m
+[32m+[m[32mimport EditPost from './pages/EditPost.jsx'[m
+[32m+[m[32mimport Login from './pages/Login.jsx'[m
+[32m+[m[32mimport Signup from "./pages/Signup.jsx"[m
+[32m+[m[32mimport Post from './pages/Post.jsx'[m
+[32m+[m[32mimport Protected from "./components/AuthLayout.jsx"[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mconst router = createBrowserRouter([[m
+[32m+[m[32m  {[m
+[32m+[m[32m    path: '/',[m
+[32m+[m[32m    element: <App />,[m
+[32m+[m[32m    children: [[m
+[32m+[m[32m      {[m
+[32m+[m[32m        path: "/",[m
+[32m+[m[32m        element: <Home />[m
+[32m+[m
+[32m+[m[32m      },[m
+[32m+[m[32m      {[m
+[32m+[m[32m        path: "/login",[m
+[32m+[m[32m        element: ([m
+[32m+[m[32m          <Protected authentication={false}>[m
+[32m+[m[32m             <Login />[m
+[32m+[m[32m          </Protected>[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m      },[m
+[32m+[m[32m        {[m
+[32m+[m[32m        path: "/signup",[m
+[32m+[m[32m        element: ([m
+[32m+[m[32m          <Protected authentication={false}>[m
+[32m+[m[32m             <Signup />[m
+[32m+[m[32m          </Protected>[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m      },[m
+[32m+[m[32m       {[m
+[32m+[m[32m        path: "/all-post",[m
+[32m+[m[32m        element: ([m
+[32m+[m[32m          <Protected authentication>[m
+[32m+[m[32m             <AllPost />[m
+[32m+[m[32m          </Protected>[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m      },[m
+[32m+[m[32m        {[m
+[32m+[m[32m        path: "/add-po
